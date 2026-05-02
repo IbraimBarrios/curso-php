@@ -1,18 +1,21 @@
 <?php 
-// Nota: las variables constantes no se pueden re-asignar
-//constantes
-const escuela = "Niños Heroes";
-define("direccion","avenida alegria");
-//escuela = "Escuela"; 
-
-
 //variables y tipos de datos
-$name = "Hello Wold";
-$edad = 10;
-$promedio = 9.2;
-$is_alumno = false;
-$nombre = 10;
 $nombre = "Jose";
+echo gettype($nombre);
+$edad = 10;
+$nombre = 10;
+echo gettype($nombre);
 
-echo $nombre, " tiene: ", $edad, " años"," de la escuela: ", escuela, " ", direccion;
+// nota: suma automatica, php reconoce que es un calculo
+$numero = "20";
+$numero2 = "10";
+
+$suma = $numero + $numero2;
+echo $suma;
+
+// calculo normal
+$valor = 20.5;
+$valor2 = 10;
+$suma2 = $valor + $valor2;
+echo $suma2;
 ?>
