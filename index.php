@@ -1,12 +1,13 @@
 <?php 
-// Concatenación
-$palabra = "Codigo";
-$palabra2 = "Facilito";
+// Nota: en comillas simple no se puede hacer la interpolación
+$saludo = "Hola";
 
-echo "Hola " .$palabra . " " . $palabra2;
+echo "$saludo Marines Bienvenida";
+echo '$saludo Marines Bienvenida';
 
-// interpolacion
-echo "Hola $palabra";
-echo "Hola $palabra $palabra2";
-echo "Hola {$palabra} Facilito";
+echo "\"Eres una mala persona\" dijo el amigo de un amigo";
+echo '"Eres una mala persona" dijo el amigo de un amigo';
+echo 'I \'dont';
+echo "\$US";
+echo '$US';
 ?>
