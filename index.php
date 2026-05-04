@@ -1,18 +1,17 @@
 <?php 
-$nombre_completo = "Jose Mendez Cruz";
-$apellido_paterno = substr($nombre_completo,5,6);
+$RFC = "91 75 1A EC C7";
+$buscar = " ";
+$remplazar = ":";
 
-$apellido2 = substr("MarinesMG",0,-2);
+$resultado = str_replace($buscar, $remplazar, $RFC);
+echo $resultado;
 
-echo $apellido_paterno;
-echo $apellido2;
 
-$bienvenida = "Bienvenido al mundo de la programacion";
-$palabra = "programacion";
+$anio = "1994";
+$mes = "01";
+$dia = "21";
+$formato = "%s-%s-%s";
 
-$posicion_de_palabra = strpos($bienvenida,$palabra);
-$palabra_buscada = substr($bienvenida,$posicion_de_palabra);
-echo $posicion_de_palabra;
-echo $palabra_buscada;
+echo sprintf($formato, $dia, $mes, $anio);
 
 ?>
