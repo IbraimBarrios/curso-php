@@ -1,22 +1,18 @@
 <?php 
+$nombre_completo = "Jose Mendez Cruz";
+$apellido_paterno = substr($nombre_completo,5,6);
 
-$saludo = "Hola";
-//Heredoc
-echo <<<Frase
-$saludo
-"No cuentes los dias", haz que los dias cuenten. 'Bye!'
-Frase;
+$apellido2 = substr("MarinesMG",0,-2);
 
-$text = <<<Texto
-Este es un Texto
-Texto;
+echo $apellido_paterno;
+echo $apellido2;
 
-echo $text;
+$bienvenida = "Bienvenido al mundo de la programacion";
+$palabra = "programacion";
 
-//Nowdoc
-// Nota: no muestra variables, solo es texto
-echo <<<'Frase'
-@$saludo
-No cuentes los dias", haz que los dias cuenten. 'Bye!
-Frase;
+$posicion_de_palabra = strpos($bienvenida,$palabra);
+$palabra_buscada = substr($bienvenida,$posicion_de_palabra);
+echo $posicion_de_palabra;
+echo $palabra_buscada;
+
 ?>
