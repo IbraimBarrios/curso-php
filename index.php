@@ -1,13 +1,22 @@
 <?php 
-// Nota: en comillas simple no se puede hacer la interpolación
+
 $saludo = "Hola";
+//Heredoc
+echo <<<Frase
+$saludo
+"No cuentes los dias", haz que los dias cuenten. 'Bye!'
+Frase;
 
-echo "$saludo Marines Bienvenida";
-echo '$saludo Marines Bienvenida';
+$text = <<<Texto
+Este es un Texto
+Texto;
 
-echo "\"Eres una mala persona\" dijo el amigo de un amigo";
-echo '"Eres una mala persona" dijo el amigo de un amigo';
-echo 'I \'dont';
-echo "\$US";
-echo '$US';
+echo $text;
+
+//Nowdoc
+// Nota: no muestra variables, solo es texto
+echo <<<'Frase'
+@$saludo
+No cuentes los dias", haz que los dias cuenten. 'Bye!
+Frase;
 ?>
