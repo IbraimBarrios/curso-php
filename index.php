@@ -1,13 +1,18 @@
 <?php 
-// Precedencia de Operadores o Gerarquias
+// If else
 
-$edad = 20;
-$trae_credencial = "No";
+$promedio = 5;
+$tiene_faltas = "No";
 
-// Nota: cuando se aga una comparacion y tenga Operadores de asignacion ==, <= entre otros
-// es recomedable usar && o || por que tienen mas jerarquia que el and o or
-$puede_votar = $edad >= 18 && $trae_credencial == "Si";
+if ($promedio >= 6 && $tiene_faltas == "No") {
 
-var_dump($puede_votar);
+  echo "Aprobo la materia";
+} else if ($tiene_faltas == "Si") {
+  echo "Reprobo por faltas";
+} else {
+  echo "Reprobo materia";
+}
+
+echo ($promedio >= 6 && $tiene_faltas == "NO") ? "Aprobado":"Reprobado";
 
 ?>
