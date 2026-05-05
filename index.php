@@ -1,25 +1,22 @@
 <?php 
-//Operadores incremento y decremento
+//Operador Ternario (Operador) ? Operando: Operando
+$promedio = 8;
 
-// Operador pre-incremento, aumenta 1 mas
-$numero = 10;
+$aprobo = ($promedio >= 7) ? "Aprobado": "Reprobado";
 
-$numero = $numero + 1;
-$numero += 1;
+echo $aprobo;
 
-echo ++$numero;
+// Operador elvis ?:
+$promedio2 = "";
 
-// Operador pos-incremento
-$numero2 = 20;
-$numero2++;
-echo $numero2;
+$aprobo2 = ($promedio2)?:"N/A";
 
-// Operador pre-decremento, decrementa uno menos
-$numero3 = 20;
-echo --$numero3;
+echo $aprobo2;
 
-// Operador pos-decremento,
-$numero4 = 20;
-$numero4--;
-echo $numero4;
+// Operdor fusion null ??
+$user = null;
+
+$user = ($user) ?? "Invitado";
+
+echo "Bienvenido: {$user}";
 ?>
