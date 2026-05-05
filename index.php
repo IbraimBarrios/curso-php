@@ -1,32 +1,23 @@
 <?php 
-//Operadores aritméticos
+//Operadores logicos
 
-// Operador identidad +
-//Operador de negacion -
+// Operador and o &&
+// Operador or o ||
+// Operador xor, true si $a O $b es true, pero no ambos a la vez.
+// Operador !
+$edad = 17;
+$es_mayor = $edad >= 18;
 
-$numero = -10;
+$regalo = "No";
+$trae_regalo = $regalo == "Si";
 
-echo $numero;
+var_dump($es_mayor and $trae_regalo);
+var_dump($es_mayor or $trae_regalo);
+var_dump($es_mayor xor $trae_regalo);
 
-// Operador de suma +
-// Operador de resta -
-// Operador de Multiplicación *
-// Operador de divición
-$numero2 = 20;
-$numero3 = 10;
-echo $numero2 + $numero3;
-echo $numero2 - $numero3;
-echo $numero2 * $numero3;
-echo $numero2 / $numero3;
+var_dump(!$es_mayor);
 
-// Operador de modulo(o de residuo)
-// Operador de Exponenciación ** en este ejemplo eleva a la 3 el 9
-$numero4 = 30;
-$numero5 = 12;
-$numero6 = 9;
-$numero7 = 3;
 
-echo $numero4 % $numero5;
-echo $numero6 ** $numero7;
-
+echo "Jose es mayor de edad: " . ($es_mayor ? 'Si' : 'No');
+echo "Jose tienen $edad años, " . ($es_mayor ? 'Si' : 'No') . " es mayor de edad ";
 ?>
