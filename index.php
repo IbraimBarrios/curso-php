@@ -1,23 +1,25 @@
 <?php 
-//Operadores logicos
+//Operadores incremento y decremento
 
-// Operador and o &&
-// Operador or o ||
-// Operador xor, true si $a O $b es true, pero no ambos a la vez.
-// Operador !
-$edad = 17;
-$es_mayor = $edad >= 18;
+// Operador pre-incremento, aumenta 1 mas
+$numero = 10;
 
-$regalo = "No";
-$trae_regalo = $regalo == "Si";
+$numero = $numero + 1;
+$numero += 1;
 
-var_dump($es_mayor and $trae_regalo);
-var_dump($es_mayor or $trae_regalo);
-var_dump($es_mayor xor $trae_regalo);
+echo ++$numero;
 
-var_dump(!$es_mayor);
+// Operador pos-incremento
+$numero2 = 20;
+$numero2++;
+echo $numero2;
 
+// Operador pre-decremento, decrementa uno menos
+$numero3 = 20;
+echo --$numero3;
 
-echo "Jose es mayor de edad: " . ($es_mayor ? 'Si' : 'No');
-echo "Jose tienen $edad años, " . ($es_mayor ? 'Si' : 'No') . " es mayor de edad ";
+// Operador pos-decremento,
+$numero4 = 20;
+$numero4--;
+echo $numero4;
 ?>
