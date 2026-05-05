@@ -1,44 +1,32 @@
 <?php 
-//Operadores de comparación
-// Operador igual ==
-// Operador identico ===
-// Operador diferente !=
-// Operador diferente <>
-// Operador no identico !== 
-$raza = "Husky";
-$edad = "10";
-$edad2 = 20;
+//Operadores aritméticos
 
-var_dump($raza == "Akita");
-var_dump($edad === 10);
-var_dump($edad2 != 10);
-var_dump($edad2 <> 10);
-var_dump($edad2 !== "28");
+// Operador identidad +
+//Operador de negacion -
 
+$numero = -10;
 
-// Operador Mayor que >
-// Operador Mayor o igual que >=
-// Operador Menor que <
-// Operador Menor o igual que <=
-$edad3 = 18;
-$edad4 = 6;
+echo $numero;
 
-var_dump($edad3 > 18);
-var_dump($edad3 >= 18);
-var_dump($edad4 < 6);
-var_dump($edad4 <= 6);
+// Operador de suma +
+// Operador de resta -
+// Operador de Multiplicación *
+// Operador de divición
+$numero2 = 20;
+$numero3 = 10;
+echo $numero2 + $numero3;
+echo $numero2 - $numero3;
+echo $numero2 * $numero3;
+echo $numero2 / $numero3;
 
-/* Operador de nave espacial <=>
-0 Ambos valores son iguales
--1 El valor es menor
-1 El valor es mayor
-*/
+// Operador de modulo(o de residuo)
+// Operador de Exponenciación ** en este ejemplo eleva a la 3 el 9
+$numero4 = 30;
+$numero5 = 12;
+$numero6 = 9;
+$numero7 = 3;
 
-$edad5 = 6;
-$edad6 = 3;
-$edad7 = 7;
-var_dump($edad5 <=> 6);
-var_dump($edad6 <=> 6);
-var_dump($edad7 <=> 6);
+echo $numero4 % $numero5;
+echo $numero6 ** $numero7;
 
 ?>
