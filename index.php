@@ -1,22 +1,13 @@
 <?php 
-//Operador Ternario (Operador) ? Operando: Operando
-$promedio = 8;
+// Precedencia de Operadores o Gerarquias
 
-$aprobo = ($promedio >= 7) ? "Aprobado": "Reprobado";
+$edad = 20;
+$trae_credencial = "No";
 
-echo $aprobo;
+// Nota: cuando se aga una comparacion y tenga Operadores de asignacion ==, <= entre otros
+// es recomedable usar && por que tienen mas jerarquia que el and
+$puede_votar = $edad >= 18 && $trae_credencial == "Si";
 
-// Operador elvis ?:
-$promedio2 = "";
+var_dump($puede_votar);
 
-$aprobo2 = ($promedio2)?:"N/A";
-
-echo $aprobo2;
-
-// Operdor fusion null ??
-$user = null;
-
-$user = ($user) ?? "Invitado";
-
-echo "Bienvenido: {$user}";
 ?>
