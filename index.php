@@ -1,18 +1,23 @@
 <?php 
-// If else
+// Switch
 
-$promedio = 5;
-$tiene_faltas = "No";
+$camisa = "Verde";
 
-if ($promedio >= 6 && $tiene_faltas == "No") {
-
-  echo "Aprobo la materia";
-} else if ($tiene_faltas == "Si") {
-  echo "Reprobo por faltas";
-} else {
-  echo "Reprobo materia";
+switch ($camisa) {
+  case "Gris":
+    echo "Encontre Camisa gris";
+    break;
+  case "Amarillo":
+    echo "Encontre Camisa Amarilla";
+    break;
+  case "Rojo":
+    echo "Encontre Camisa Roja";
+    break;
+  case "Verde":
+    echo "Encontre Camisa Verde";
+    break;
+  default:
+  echo "No se encontro un color de camisa";
 }
-
-echo ($promedio >= 6 && $tiene_faltas == "NO") ? "Aprobado":"Reprobado";
 
 ?>
