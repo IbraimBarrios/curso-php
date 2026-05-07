@@ -1,8 +1,10 @@
 <?php 
-// for
+// foreach
 
-for ($i=0; $i < 10; $i++) { 
-  echo "Valor de la variable", $i;
-}
+$array = ["Jose", "Maria", "Monica"];
+
+foreach ($array as $nombre) {
+  echo "Mi nombre es: ", $nombre;
+};
 
 ?>
