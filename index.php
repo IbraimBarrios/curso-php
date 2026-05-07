@@ -1,15 +1,15 @@
 <?php 
-// Arreglos
+// Arreglos asociativos
 
-$array = ["Jose", "Maria", "Monica"];
-$array2 = [true, "Maria", 10, 12.9, [true, "Pepe"], "No", ["foo" => 1, "bar" => 2]];
+$datos = [
+  "name" => "marines",
+  "apellido" => "Mendez",
+  "edad" => 29
+];
 
-echo $array[1];
-echo $array[0];
+var_dump($datos['apellido']);
 
-// se obtiene el index del array
-foreach ($array as $index => $nombre) {
-  echo "Mi nombre es: ", $nombre, " index: ", $index;
-};
-
+foreach ($datos as $key =>  $valor) {
+  echo $key, " = ", $valor;
+}
 ?>
