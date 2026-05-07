@@ -1,19 +1,8 @@
 <?php 
-// while
-// do while
+// for
 
-$zapatos = 0;
-
-while ($zapatos <= 100) {
-  echo "Zapato Numero: ", $zapatos;
-  $zapatos++;
+for ($i=0; $i < 10; $i++) { 
+  echo "Valor de la variable", $i;
 }
-
-echo $zapatos;
-
-do {
-  echo "Zapato Numero: ", $zapatos;
-  $zapatos++;
-} while ($zapatos <= 103);
 
 ?>
