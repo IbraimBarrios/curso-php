@@ -1,15 +1,36 @@
 <?php 
-// Arreglos asociativos
+// Arreglos
 
+// Agregar, Eliminar y Modificar datos en un arreglos con index y arreglos con llaves
+
+$alumnos = ["Marines", "Joze", "Sofia"];
 $datos = [
-  "name" => "marines",
-  "apellido" => "Mendez",
-  "edad" => 29
-];
+  "nombre" => "Marines",
+  "Apellido"=> "Mendes",
+  "Edad" => 29
+  ];
 
-var_dump($datos['apellido']);
+  // agregar datos al arreglo normal y arreglo asociativo
+  array_push($alumnos, "Luis");
+  $datos['Colonia'] = "Alegria";
 
-foreach ($datos as $key =>  $valor) {
-  echo $key, " = ", $valor;
-}
+  
+  var_dump($alumnos);
+  var_dump($datos);
+
+  // Editar datos en el arreglo
+  $alumnos[1] = "Jose";
+  $datos["Apellido"] = "Mendez";
+
+  var_dump($alumnos);
+  var_dump($datos);
+
+  // Eliminar en arreglos
+  unset($alumnos[1]);
+  unset($datos["Apellido"]);
+
+  var_dump($alumnos);
+  var_dump($datos);
+
+
 ?>
