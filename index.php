@@ -1,23 +1,17 @@
 <?php 
-// Switch
+// match
 
-$camisa = "Verde";
+// Nota: match solo puede regresar un valor en cada caso.
+// No se puede realizar operaciones dentro del caso.
 
-switch ($camisa) {
-  case "Gris":
-    echo "Encontre Camisa gris";
-    break;
-  case "Amarillo":
-    echo "Encontre Camisa Amarilla";
-    break;
-  case "Rojo":
-    echo "Encontre Camisa Roja";
-    break;
-  case "Verde":
-    echo "Encontre Camisa Verde";
-    break;
-  default:
-  echo "No se encontro un color de camisa";
-}
+$camisa = "Negro";
+
+echo match ($camisa) {
+  "Gris" => "Encontre Camisa gris",
+  "Amarillo"=> "Encontre Camisa Amarilla",
+  "Rojo"=> "Encontre Camisa Roja",
+  "Verde"=> "Encontre Camisa Verde",
+  default => "No se encontro un color de camisa",
+};
 
 ?>
