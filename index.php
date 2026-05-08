@@ -1,5 +1,5 @@
 <?php 
-// Arreglos multidimensional
+// Recorrer arreglo multidimensional
 
 $animales = [/*0*/["Puma", "Jaguar", "Lince"], /*1*/["Paloma","Pato","Tucan"], /*2*/["Serpiente","Cocodrilo","Tortuga"]];
 $animales2 = [
@@ -8,8 +8,11 @@ $animales2 = [
   "Reptiles" => ["Serpiente","Cocodrilo","Tortuga"]
 ];
 
-var_dump($animales[2][1]);
-var_dump($animales2["Aves"][1]);
+foreach ($animales2 as $key => $clasificacion) {
+  foreach ($clasificacion as $animal) {
+    echo $key, ": ", $animal, " ";
+  }
+}
 
 
 ?>
