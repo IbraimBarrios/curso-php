@@ -1,18 +1,15 @@
 <?php 
-// Ejemplo de un |> pipe en php
-// Nota: |> el operador pipe no funciona aun en php
+// Arreglos multidimensional
 
-$name = "Pepe";
-$name = strtoupper($name);
-$name = strrev($name);
+$animales = [/*0*/["Puma", "Jaguar", "Lince"], /*1*/["Paloma","Pato","Tucan"], /*2*/["Serpiente","Cocodrilo","Tortuga"]];
+$animales2 = [
+  "Felinos" => ["Puma", "Jaguar", "Lince"], 
+  "Aves" => ["Paloma","Pato","Tucan"],
+  "Reptiles" => ["Serpiente","Cocodrilo","Tortuga"]
+];
 
-echo $name;
-
-$name2 = "Marcos";
-// $name_reverce = $name2 |> strtoupper() |> strrev(); ejemplo del operador pipe. en elixir
-$name_reverce = strrev(strtoupper($name2));
-
-echo $name_reverce;
+var_dump($animales[2][1]);
+var_dump($animales2["Aves"][1]);
 
 
 ?>
