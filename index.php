@@ -1,36 +1,55 @@
 <?php 
-// Arreglos
+// Funciones en arreglos
 
-// Agregar, Eliminar y Modificar datos en un arreglos con index y arreglos con llaves
-
-$alumnos = ["Marines", "Joze", "Sofia"];
+$alumnos = ["Marines", "Jose", "Sofia", "Luis"];
 $datos = [
   "nombre" => "Marines",
-  "Apellido"=> "Mendes",
-  "Edad" => 29
+  "Apellido"=> "Mendez",
+  "Edad" => 29,
   ];
 
-  // agregar datos al arreglo normal y arreglo asociativo
-  array_push($alumnos, "Luis");
-  $datos['Colonia'] = "Alegria";
 
+  // Contar elementos de la lista
+  // var_dump(count($alumnos));
+  // var_dump(count($datos));
+
+  // Ordenar elementos de la lista de manera ascendente
+  asort($alumnos);
+  asort($datos);
+
+  // var_dump($alumnos);
+  // var_dump($datos);
+
+  // Ordenar de manera Descendente
+  arsort($alumnos);
+  arsort($datos);
+
+  // var_dump($alumnos);
+  // var_dump($datos);
   
-  var_dump($alumnos);
-  var_dump($datos);
+  // Buscar 
+  $index = array_search("Jose", $alumnos);
+  $key = array_search(29, $datos);
 
-  // Editar datos en el arreglo
-  $alumnos[1] = "Jose";
-  $datos["Apellido"] = "Mendez";
+  // var_dump($index);
+  // var_dump($key);
 
-  var_dump($alumnos);
-  var_dump($datos);
+  // Replazar, sustituye los elementos de un array por los de otro array
+  $alumos_correcion = array_replace($alumnos, [
+    0=> "Laura",
+    1=> "Pepe",
+  ]);
 
-  // Eliminar en arreglos
-  unset($alumnos[1]);
-  unset($datos["Apellido"]);
+  $datos_correccion = array_replace($datos, [
+    "Apellido" => "Cruz",
+    "direccion" => "Allende"
+  ]);
 
-  var_dump($alumnos);
-  var_dump($datos);
+  var_dump($alumos_correcion);
+  var_dump($datos_correccion);
+
+
+
 
 
 ?>
