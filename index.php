@@ -1,7 +1,10 @@
 <?php 
-// funciones: Return 
+// funciones: Tipado en funciones
 
-function obtener_edad($anio, $anio_actual = 2026) {
+// Nota: El Modo Estricto: obliga al intérprete a coincidir exactamente con los tipos de datos 
+// declarados en funciones y retornos, eliminando la coerción automática de tipos
+declare(strict_types=1); // Modo estricto
+function obtener_edad($anio, int $anio_actual = 2026) {
   $edad = $anio_actual - $anio;
   return $edad;
 }
