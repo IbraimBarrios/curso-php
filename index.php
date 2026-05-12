@@ -1,13 +1,14 @@
 <?php 
-// funciones: Parámetros y argumentos 
+// funciones: Return 
 
-// $anio = 1996;
-function obtener_edad($anio, $anio_actual = 2026){
+function obtener_edad($anio, $anio_actual = 2026) {
   $edad = $anio_actual - $anio;
-  echo "Mi edad es: $edad";
+  return $edad;
 }
 
-obtener_edad(1996, 2010);
+$edad = obtener_edad(1996, 2010);
+echo "Mi edad es: $edad";
+
 obtener_edad(2000);
 
 ?>
