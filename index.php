@@ -1,17 +1,20 @@
 <?php 
-// funciones: Tipado en funciones
+// Funciones anónimas
 
-// Nota: El Modo Estricto: obliga al intérprete a coincidir exactamente con los tipos de datos 
-// declarados en funciones y retornos, eliminando la coerción automática de tipos
-declare(strict_types=1); // Modo estricto
-function obtener_edad(int $anio, int $anio_actual = 2026) {
-  $edad = $anio_actual - $anio;
-  return $edad;
-}
+// Nota: En funciones anonimas se puede usar variables externas
+// con la palabra reservada use
+$mensaje = "La suma es: ";
 
-$edad = obtener_edad(1996, 2010);
-echo "Mi edad es: $edad";
+$suma = function($numero1, $numero2) use ( $mensaje) {
+  $resultado =  $numero1 + $numero2;
+  return "$mensaje $resultado";
+};
 
-obtener_edad(2000);
+echo $suma(100, 200);
 
+$suma2 = function($numero1, $numero2) {
+  return $numero1 + $numero2;
+};
+
+echo "La suma es: ", $suma2(10, 20);
 ?>
