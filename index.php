@@ -1,20 +1,15 @@
 <?php 
-// Funciones anónimas
+require_once("persona.php");
+// Clase
 
-// Nota: En funciones anonimas se puede usar variables externas
-// con la palabra reservada use
-$mensaje = "La suma es: ";
+$jose = new Persona();
+$jose->nombre = "Jose";
+$jose->edad = 29;
+echo $jose->nombre;
+$jose->hablar("Musica");
 
-$suma = function($numero1, $numero2) use ( $mensaje) {
-  $resultado =  $numero1 + $numero2;
-  return "$mensaje $resultado";
-};
-
-echo $suma(100, 200);
-
-$suma2 = function($numero1, $numero2) {
-  return $numero1 + $numero2;
-};
-
-echo "La suma es: ", $suma2(10, 20);
+$sofia = new Persona();
+$sofia->nombre = "Sofia";
+echo $sofia->nombre;
+$sofia->hablar("Política");
 ?>
