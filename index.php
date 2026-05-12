@@ -1,18 +1,11 @@
 <?php 
-// Recorrer arreglo multidimensional
+// funciones
 
-$animales = [/*0*/["Puma", "Jaguar", "Lince"], /*1*/["Paloma","Pato","Tucan"], /*2*/["Serpiente","Cocodrilo","Tortuga"]];
-$animales2 = [
-  "Felinos" => ["Puma", "Jaguar", "Lince"], 
-  "Aves" => ["Paloma","Pato","Tucan"],
-  "Reptiles" => ["Serpiente","Cocodrilo","Tortuga"]
-];
-
-foreach ($animales2 as $key => $clasificacion) {
-  foreach ($clasificacion as $animal) {
-    echo $key, ": ", $animal, " ";
-  }
+function obtener_edad(){
+  $edad = 2026 - 1996;
+  echo "Mi edad es: $edad";
 }
 
+obtener_edad();
 
 ?>
