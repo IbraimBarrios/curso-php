@@ -5,9 +5,14 @@ require_once("persona.php");
 
 $jose = new Persona();
 $jose->nombre = "Jose";
-$jose->edad = 29;
-echo $jose->nombre;
-$jose->hablar("Musica");
+
+// ejemplo1: get y set normal
+$jose->setTelefono("9336462780");
+echo $jose->getTelefono();
+
+// Ejemplo2: __get y __set magicos
+$jose->__set("telefono","0932399870");
+echo $jose->__get("telefono");
 
 $sofia = new Persona();
 $sofia->nombre = "Sofia";
