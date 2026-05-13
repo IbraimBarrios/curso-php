@@ -8,7 +8,7 @@ class Persona {
   static $idioma;
 
   function hablar(string $tema){
-    echo "Yo hablo de: $tema";
+    echo "Yo soy ",$this->nombre, " y hablo de: $tema";
   }
   function ver(){
 
