@@ -52,7 +52,7 @@ class Persona {
     return ($tema== "Política") ? "Tema extenso" : "Tema no extenso";
   }
 
-  private function validarTelefono($telefono) {
+  protected function validarTelefono($telefono) {
     if (preg_match('/^[0-9]{10}$/', $telefono)) {
       return $telefono;
     } else {
