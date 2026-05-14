@@ -1,12 +1,15 @@
 <?php 
+require_once("cliente.php");
 require_once("persona.php");
-// Constructor y destructor
+// Herencia
+// Nota: con protected, hace que el metodo lo puedan usar en clase padre y clases hijos,
+// no en las instancias. 
 
-// Nota se le puede mandar valor al constructor por los parametros
-$jose = new Persona("Carlos", "Lopez");
+$cliente = new Cliente();
+$persona = new Persona();
 
-var_dump($jose->nombre);
+$cliente->nombre = "Paco";
+$cliente->setTelefono("9373635243");
+$cliente->comer();
 
-$sofia = new Persona("Monica");
-var_dump($sofia->nombre);
 ?>
