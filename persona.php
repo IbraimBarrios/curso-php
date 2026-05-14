@@ -1,5 +1,8 @@
 <?php
-class Persona {
+// abstract
+// Nota: clase principal o clase padre que no puede ser instancia directa(nos se puede crear objetos en ella).
+
+abstract class Persona {
   // Variable de instancia
   static $idioma;
 
