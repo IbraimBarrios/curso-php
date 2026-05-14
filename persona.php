@@ -7,6 +7,19 @@ class Persona {
   // Variable de instancia
   static $idioma;
 
+  // Constructor: se usa para inicializar datos
+  public function __construct(
+    string $nombre = "",
+    string $apellido = "",
+    int $edad = 0,
+    string $telefono = "",
+  ){
+    $this->nombre = $nombre;
+    $this->apellido = $apellido;
+    $this->edad = $edad;
+    $this->telefono = $telefono;
+  }
+
   // Get y Set
   public function getTelefono() {
     return $this->telefono;
@@ -53,6 +66,11 @@ class Persona {
     } else {
       return "Estructura incorecta";
     }
+  }
+
+  public function __destruct()
+  {
+    echo "Fin del objeto";
   }
 
 }
