@@ -2,9 +2,7 @@
 require_once("cliente.php");
 require_once("empleado.php");
 // Polimorfismo
-// Nota: existen 2 tipos, sobre carga de funciones y anulación de funciones
-// 1- sobre carga de funciones, se realiza en tiempo de compilación. PHP no admite este tipo.
-// 2- anulación de funiones
+// Nota: mecanismo de reutilización de codigo en lenguaje de herencia simple.
 
 $cliente = new Cliente();
 
