@@ -7,13 +7,14 @@ require_once("autoload.php");
 
 $cliente = new Cliente();
 
-$cliente->nombre = "Paco";
-$cliente->setTelefono("9373635243");
-$cliente->comer();
-$empleado = new Empleado();
-$proveedor = new Proveedor();
-$empleado->nombre = "Manuel";
-$cliente->saludar($empleado);
-$cliente->hablar("Pop")
+$claseAnonima = new class {
+  public $nombre;
+
+  function suma(){
+    echo 4+6;
+  }
+};
+
+$claseAnonima->suma();
 
 ?>
