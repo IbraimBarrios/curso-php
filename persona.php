@@ -43,6 +43,12 @@ abstract class Persona {
     echo "Yo soy ",$this->nombre, " y hablo de: $tema ", $this->tema_es_extenso($tema);
   }
 
+  // Ejemplo de polimorfismo: Sobre carga de funciones
+  // Nota: Son funciones con mismo nombre pero con mas de un parametro
+  // public function hablar($tema, $valor){
+
+  // }
+
   function ver(){
 
   }

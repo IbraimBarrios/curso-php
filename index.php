@@ -1,8 +1,10 @@
 <?php 
 require_once("cliente.php");
 require_once("empleado.php");
-// Type Hinting
-// Nota: Poder enviar un argumento de tipo objeto a un metodo.
+// Polimorfismo
+// Nota: existen 2 tipos, sobre carga de funciones y anulación de funciones
+// 1- sobre carga de funciones, se realiza en tiempo de compilación. PHP no admite este tipo.
+// 2- anulación de funiones
 
 $cliente = new Cliente();
 
@@ -12,5 +14,6 @@ $cliente->comer();
 $empleado = new Empleado();
 $empleado->nombre = "Manuel";
 $cliente->saludar($empleado);
+$cliente->hablar("Pop")
 
 ?>

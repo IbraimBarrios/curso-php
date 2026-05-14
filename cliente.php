@@ -15,5 +15,11 @@ class Cliente extends Persona {
   function saludar(Empleado $empleado) {
     echo "Felicidades chef ", $empleado->nombre;
   }
+
+  // Polimorfismo: Anulación de funciones
+  // Se remplaza el metodo de la clase padre
+  function hablar($tema){
+    echo "Hola mi tema es: ", $tema;
+  }
 } 
 ?>
