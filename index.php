@@ -1,21 +1,12 @@
 <?php 
 require_once("persona.php");
-// this
-// Nota: Hace una referencia a la instancia actual
+// Constructor y destructor
 
-$jose = new Persona();
-$jose->nombre = "Jose";
+// Nota se le puede mandar valor al constructor por los parametros
+$jose = new Persona("Carlos", "Lopez");
 
-// ejemplo1: get y set normal
-$jose->setTelefono("9336462780");
-echo $jose->getTelefono();
+var_dump($jose->nombre);
 
-// Ejemplo2: __get y __set magicos
-$jose->__set("telefono","0932399870");
-echo $jose->__get("telefono");
-
-$sofia = new Persona();
-$sofia->nombre = "Sofia";
-echo $sofia->nombre;
-$sofia->hablar("Política");
+$sofia = new Persona("Monica");
+var_dump($sofia->nombre);
 ?>
