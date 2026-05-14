@@ -7,7 +7,8 @@ class Persona {
   public function __construct(
     public string $nombre = "",
     private string $apellido = "",
-    public int $edad = 0,
+    //Nota: el atributo puede aseptar otros tipos de datos, apartir de la vercion 8 de php
+    public int|float $edad = 0,
     private string $telefono = "",
   ){}
 
