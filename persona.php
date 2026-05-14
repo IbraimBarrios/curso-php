@@ -1,24 +1,15 @@
 <?php
 class Persona {
-  public $nombre;
-  private $apellido;
-  public $edad;
-  private $telefono;
   // Variable de instancia
   static $idioma;
 
-  // Constructor: se usa para inicializar datos
+  // Constructor v8: se usa para inicializar datos
   public function __construct(
-    string $nombre = "",
-    string $apellido = "",
-    int $edad = 0,
-    string $telefono = "",
-  ){
-    $this->nombre = $nombre;
-    $this->apellido = $apellido;
-    $this->edad = $edad;
-    $this->telefono = $telefono;
-  }
+    public string $nombre = "",
+    private string $apellido = "",
+    public int $edad = 0,
+    private string $telefono = "",
+  ){}
 
   // Get y Set
   public function getTelefono() {
