@@ -1,18 +1,14 @@
 <?php 
-require_once("autoload.php");
-(new AutoCarga())->cargarRutas();
+require_once("usuario.php");
+$usuario = new Usuario(
+  "Maria",
+  "Lopez",
+  "9876546379",
+  20
+);
 
-
-$cliente = new Cliente();
-
-$claseAnonima = new class {
-  public $nombre;
-
-  function suma(){
-    echo 4+6;
-  }
-};
-
-$claseAnonima->suma();
-
+$usuario->insertar();
+$usuario->actualizar(2);
+$usuario->remover(3);
+var_dump($usuario->consultarUno(2));
 ?>

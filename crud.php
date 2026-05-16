@@ -5,6 +5,7 @@ class crud extends Conexion {
   public function __construct(
     public string $tabla,
   ){
+    parent::__construct();
     $this->pdo = $this->conexion();
   }
 
@@ -23,6 +24,7 @@ class crud extends Conexion {
     try {
       $stm = $this->pdo->prepare("SELECT * FROM $this->tabla WHERE id=?");
       $stm->execute([$id]);
+      return $stm->fetch(PDO::FETCH_OBJ);
     } catch (PDOException $mensaje) {
       echo $mensaje->getMessage();
     }
@@ -39,12 +41,12 @@ class crud extends Conexion {
   }
 
   public function crear(string $columnas, string $marcadores, array $datos) {
-    $stm = $this->pdo->prepare("INSERT INTO $this->tabla $columnas VALUES $marcadores");
+    $stm = $this->pdo->prepare("INSERT INTO $this->tabla ($columnas) VALUES ($marcadores)");
     $stm->execute($datos);
   }
 
-  public function modificacion(string $columnas, array $datos, int $id) {
-    $stm = $this->pdo->prepare("UPDATE $this->tabla SET $columnas WHERE id=$id");
+  public function modificacion(string $columnas, array $datos) {
+    $stm = $this->pdo->prepare("UPDATE $this->tabla SET $columnas WHERE id=?");
     $stm->execute($datos);
   }
 
