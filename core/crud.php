@@ -1,5 +1,5 @@
 <?php
-require_once("conexion.php");
+require_once("core/conexion.php");
 class crud extends Conexion {
   private $pdo;
   public function __construct(
